@@ -12,5 +12,9 @@ function login($email, $password) {
 }
 
 // Stub for CSRF protection functions
-function csrf_check() {}
-function csrf_field() {}
+if (!function_exists('csrf_check')) {
+    function csrf_check() {}
+}
+if (!function_exists('csrf_field')) {
+    function csrf_field() {}
+}
